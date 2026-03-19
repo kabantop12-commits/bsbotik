@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: brawl-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python brawl_bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
